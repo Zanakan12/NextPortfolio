@@ -24,7 +24,7 @@ export default function MobileMenu() {
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
                         transition={{ duration: 0.3 }}
-                        className="fixed top-0 right-0 h-full w-64 bg-black text-white z-50 rounded-l-2xl border border-yellow-400 p-6 flex flex-col gap-6"
+                        className="fixed top-0 right-0 h-full w-64 bg-black text-white z-50 rounded-l-2xl  p-6 flex flex-col gap-6"
                     >
                         <button
                             className="absolute top-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center"

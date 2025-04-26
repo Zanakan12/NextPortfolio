@@ -23,7 +23,7 @@ export default function AboutPage() {
             </section>
 
             {/* MY VALUE */}
-            <section className="bg-[#181826] rounded-xl p-6 border border-yellow-400 max-w-5xl mx-auto mb-12">
+            <section className="bg-[#181826] rounded-xl p-6  max-w-5xl mx-auto mb-12">
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
                     <FaKey className="text-yellow-400" /> My Value
                 </h2>

@@ -26,7 +26,7 @@ export default function Footer() {
                 </div>
 
                 <a href="#" className="flex items-center gap-1 text-xs">
-                    Back To Top <span className="text-white border border-white rounded-full w-5 h-5 flex justify-center items-center">↑</span>
+                    Back To Top <span className="text-white -white rounded-full w-5 h-5 flex justify-center items-center">↑</span>
                 </a>
             </div>
         </footer>

@@ -1,25 +1,31 @@
-const categories = [
-    "ALL",
-    "WEBSITE",
-    "MOBILE APP",
-    "E-COMMERCE",
-    "ARTIFICIAL INTELLIGENCE",
-    "INVOICE MANAGER",
+interface CategoryFilterProps {
+  activeCategory: string;
+  setActiveCategory: (category: string) => void;
+}
 
-  ];
-  
-  export default function CategoryFilter() {
-    return (
-      <div className="flex flex-wrap gap-4 py-8 px-6 bg-black text-white">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            className="uppercase font-bold text-sm hover:text-yellow-400 transition"
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-    );
-  }
-  
+const categories = [
+  "ALL",
+  "WEBSITE",
+  "MOBILE APP",
+  "E-COMMERCE",
+  "ARTIFICIAL INTELLIGENCE",
+  "INVOICE MANAGER",
+];
+
+export default function CategoryFilter({ activeCategory, setActiveCategory }: CategoryFilterProps) {
+  return (
+    <div className="flex flex-wrap gap-4 py-8 px-6 bg-black text-white justify-center">
+      {categories.map((category, index) => (
+        <button
+          key={index}
+          className={`uppercase font-bold text-sm transition ${activeCategory === category ? "text-yellow-400" : "hover:text-yellow-400"
+            }`}
+          onClick={() => setActiveCategory(category)}
+        >
+          {category}
+        </button>
+
+      ))}
+    </div>
+  );
+}
