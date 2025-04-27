@@ -4,7 +4,7 @@ export default function Footer() {
             {/* Section 1 - Email & flèche */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
                 <div className="text-2xl font-semibold">
-                    {"zanakan12maniac@proton.me"} <span className="text-xl">↘</span>
+                    <span className="text-xl">↘</span>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-8">

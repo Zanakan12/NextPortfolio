@@ -8,7 +8,7 @@ export default function AboutPage() {
             <section className="text-center max-w-4xl mx-auto mb-12">
                 <h1 className="text-3xl font-bold mb-4">{"WHY CHOOSE ME ?"}</h1>
                 <p className="text-lg">
-                    {"I'm"} <span className="font-semibold text-yellow-400">{"Djihadi Raftandjani"}</span>, {"a full-stack developer apprentice with a dual background in science and tech. I&apos;m passionate about building efficient, innovative, and scalable solutions for real-world problems."}
+                    {"I'm"} <span className="font-semibold text-yellow-400">{"Djihadi Raftandjani"}</span>, {"a full-stack developer apprentice with a dual background in science and tech. I'm passionate about building efficient, innovative, and scalable solutions for real-world problems."}
                 </p>
                 <div className="mt-6">
                     <a
