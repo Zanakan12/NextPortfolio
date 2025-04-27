@@ -9,7 +9,7 @@ export default function Header() {
             <div className="flex items-center gap-2 z-10">
                 <Image src="/logo.png" alt="Yellow Panther" width={40} height={40} />
                 <h1 className="text-white font-bold text-lg">
-                    FULL <span className="text-gray-400">STACK DEVELOPER</span>
+                    {"FULL"} <span className="text-gray-400">{"STACK DEVELOPER"}</span>
                 </h1>
             </div>
 

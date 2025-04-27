@@ -4,12 +4,12 @@ export default function Footer() {
             {/* Section 1 - Email & flèche */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
                 <div className="text-2xl font-semibold">
-                    zanakan12maniac@proton.me <span className="text-xl">↘</span>
+                    {"zanakan12maniac@proton.me"} <span className="text-xl">↘</span>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-8">
                     <div>
-                        🇫🇷<br />ZONE 01 ROUEN<br />
+                        🇫🇷<br />{"ZONE 01 ROUEN"}<br />
                     </div>
                 </div>
             </div>
@@ -21,8 +21,8 @@ export default function Footer() {
                 </p>
 
                 <div className="flex gap-4 text-xs">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms And Conditions</a>
+                    <a href="#">{"Privacy Policy"}</a>
+                    <a href="#">{"Terms And Conditions"}</a>
                 </div>
 
                 <a href="#" className="flex items-center gap-1 text-xs">
