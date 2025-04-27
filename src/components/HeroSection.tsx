@@ -15,7 +15,7 @@ export default function HeroSection() {
       <div className="absolute right-2 top-12 transform -translate-y-1/2">
         <div className="w-28 h-28 rounded-full border-4 border-white flex items-center justify-center text-center text-sm rotate-[-15deg] hover:scale-105 transition-all cursor-pointer shadow-lg">
           <div className="text-white font-bold">
-            ▶<br />{"PLAY"}<br />{"SHOWREEL"}
+            {"▶"}<br />{"PLAY"}<br />{"SHOWREEL"}
           </div>
         </div>
       </div>

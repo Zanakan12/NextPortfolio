@@ -45,7 +45,7 @@ export default function ServicesPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        My Services
+        {"My Services"}
       </motion.h1>
 
       <motion.p

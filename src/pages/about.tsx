@@ -25,7 +25,7 @@ export default function AboutPage() {
             {/* MY VALUE */}
             <section className="bg-[#181826] rounded-xl p-6  max-w-5xl mx-auto mb-12">
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaKey className="text-yellow-400" /> My Value
+                    <FaKey className="text-yellow-400" />{"My Value"} 
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4 text-sm text-white/90">
                     <ul className="space-y-2 list-disc pl-5">
@@ -55,20 +55,20 @@ export default function AboutPage() {
                         </ul>
                     </div>
                     <div>
-                        <p className="font-semibold text-yellow-400 mb-2">Frameworks</p>
+                        <p className="font-semibold text-yellow-400 mb-2">{"Frameworks"}</p>
                         <ul className="space-y-1">
                             <li>{"Django, Dear ImGui, Android Studio"}</li>
                             <li>{"Qt Creator, MIT App Inventor, React"}</li>
                         </ul>
                     </div>
                     <div>
-                        <p className="font-semibold text-yellow-400 mb-2">Databases</p>
+                        <p className="font-semibold text-yellow-400 mb-2">{"Databases"}</p>
                         <ul className="space-y-1">
                             <li>{"SQLite, MobiDB, TinyDB, TinyWebDB"}</li>
                         </ul>
                     </div>
                     <div>
-                        <p className="font-semibold text-yellow-400 mb-2">Tools</p>
+                        <p className="font-semibold text-yellow-400 mb-2">{"Tools"}</p>
                         <ul className="space-y-1">
                             <li>{"Git, Docker, UML, VS Code"}</li>
                             <li>{"Figma, REST API, WebSocket"}</li>
@@ -84,23 +84,23 @@ export default function AboutPage() {
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6 text-sm">
                     <div>
-                        <p className="font-semibold">2024–2027</p>
+                        <p className="font-semibold">{"2024–2027"}</p>
                         <p>{"Full Stack Development — Zone 01 Normandie, Rouen"}</p>
                     </div>
                     <div>
-                        <p className="font-semibold">2022–2024</p>
+                        <p className="font-semibold">{"2022–2024"}</p>
                         <p>{"Captain Deliverer — Just Eat, Rouen"}</p>
                     </div>
                     <div>
-                        <p className="font-semibold">2019–2023</p>
+                        <p className="font-semibold">{"2019–2023"}</p>
                         <p>{"Study in Biology — University of Rouen"}</p>
                     </div>
                     <div>
-                        <p className="font-semibold">2016–2019</p>
+                        <p className="font-semibold">{"2016–2019"}</p>
                         <p>{"Study in Computer Science — University of Pau"}</p>
                     </div>
                     <div>
-                        <p className="font-semibold">2015–2016</p>
+                        <p className="font-semibold">{"2015–2016"}</p>
                         <p>{"Scientific Baccalauréat (Maths) — Mayotte"}</p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                         <p><span className="font-semibold">{"Driving License:"}</span> {"Permis B"}</p>
-                        <p className="mt-2"><span className="font-semibold">Contact:</span> {"zanakan12maniac@proton.me"}</p>
+                        <p className="mt-2"><span className="font-semibold">{"Contact:"}</span> {"zanakan12maniac@proton.me"}</p>
                     </div>
                     <div>
                         <p><span className="font-semibold">{"Interests:"}</span>{" Handball, Workout, Finance, Poetry"}</p>
