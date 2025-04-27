@@ -2,10 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-interface RainbowButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> { }
-
-
 interface RainbowButtonProps {
   children: React.ReactNode;
   className?: string;
