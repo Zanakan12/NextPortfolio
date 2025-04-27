@@ -8,7 +8,7 @@ export default function AboutPage() {
             <section className="text-center max-w-4xl mx-auto mb-12">
                 <h1 className="text-3xl font-bold mb-4">{"WHY CHOOSE ME ?"}</h1>
                 <p className="text-lg">
-                    {"I'm"} <span className="font-semibold text-yellow-400">{"Djihadi Raftandjani"}</span>, {"a full-stack developer apprentice with a dual background in science and tech. I'm passionate about building efficient, innovative, and scalable solutions for real-world problems."}
+                    {"I&apos;m"} <span className="font-semibold text-yellow-400">{"Djihadi Raftandjani"}</span>, {"a full-stack developer apprentice with a dual background in science and tech. I&apos;m passionate about building efficient, innovative, and scalable solutions for real-world problems."}
                 </p>
                 <div className="mt-6">
                     <a
@@ -25,7 +25,7 @@ export default function AboutPage() {
             {/* MY VALUE */}
             <section className="bg-[#181826] rounded-xl p-6  max-w-5xl mx-auto mb-12">
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaKey className="text-yellow-400" />{"My Value"} 
+                    <FaKey className="text-yellow-400" />{"My Value"}
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4 text-sm text-white/90">
                     <ul className="space-y-2 list-disc pl-5">
