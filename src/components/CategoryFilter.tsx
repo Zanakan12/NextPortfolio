@@ -9,7 +9,8 @@ const categories = [
   "MOBILE APP",
   "E-COMMERCE",
   "ARTIFICIAL INTELLIGENCE",
-  "INVOICE MANAGER",
+  "DESKTOP APP",
+  "GAME",
 ];
 
 export default function CategoryFilter({ activeCategory, setActiveCategory }: CategoryFilterProps) {
