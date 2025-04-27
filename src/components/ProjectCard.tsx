@@ -1,4 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 
 interface ProjectCardProps {
   image: string;
@@ -20,11 +21,14 @@ export default function ProjectCard({ image, title, github, site, badge }: Proje
       </div>
 
       {/* Image */}
-      <img
+      <Image
         src={`/projects/${image}`}
         alt={title}
+        width={300}
+        height={102}
         className="w-full h-48 object-cover"
       />
+
 
       {/* Contenu */}
       <div className="p-4 flex flex-col justify-between h-32">

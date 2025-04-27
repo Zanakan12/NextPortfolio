@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaTools, FaKey, FaCode, FaLanguage } from "react-icons/fa";
+import { FaGraduationCap, FaTools, FaKey, FaLanguage } from "react-icons/fa";
 import SkillGrid from '../components/SkillGrid';
 
 export default function AboutPage() {

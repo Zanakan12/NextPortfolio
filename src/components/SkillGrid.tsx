@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface SkillCategoryProps {
     title: string;
     skills: { name: string; icon: string }[];
@@ -13,7 +15,7 @@ const SkillCategory = ({ title, skills }: SkillCategoryProps) => (
                     key={skill.name}
                     className="bg-[#1f1f2e] rounded-xl p-4 w-24 h-24 flex items-center justify-center shadow hover:scale-110 transition"
                 >
-                    <img src={skill.icon} alt={skill.name} title={skill.name} className="w-14 h-14 object-contain" />
+                    <Image src={skill.icon} alt={skill.name} title={skill.name} className="w-14 h-14 object-contain" />
 
                 </div>
             ))}
