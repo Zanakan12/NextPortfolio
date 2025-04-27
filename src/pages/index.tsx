@@ -17,6 +17,7 @@ export default function Home() {
       <div className="flex justify-center mt-10">
         <RainbowButton href="/about">HOW I CAN CONTRIBUTE TO YOUR SUCESS ? </RainbowButton>
       </div>
+      
       <div className="flex justify-center mt-10 rounded-md">
         <CategoryFilter
           activeCategory={activeCategory}

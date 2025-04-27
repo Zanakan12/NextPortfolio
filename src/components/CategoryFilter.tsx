@@ -14,7 +14,7 @@ const categories = [
 
 export default function CategoryFilter({ activeCategory, setActiveCategory }: CategoryFilterProps) {
   return (
-    <div className="flex flex-wrap gap-4 py-8 px-6 bg-black text-white justify-center">
+    <div className="flex flex-wrap gap-4 py-8 px-6 bg-black text-white justify-center rounded-t-md">
       {categories.map((category, index) => (
         <button
           key={index}
