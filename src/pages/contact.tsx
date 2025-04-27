@@ -52,7 +52,7 @@ export default function ContactPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-       {"I&apos;m open to freelance opportunities, collaborations, or just a chat!"}
+        {"I'm open to freelance opportunities, collaborations, or just a chat!"}
       </motion.p>
 
       {/* Formulaire */}
