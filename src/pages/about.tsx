@@ -1,16 +1,42 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { FaGraduationCap, FaTools, FaKey, FaLanguage } from "react-icons/fa";
-import SkillGrid from '../components/SkillGrid';
+import SkillGrid from "../components/SkillGrid";
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-black to-blue-900 text-white p-8">
+        <main className="min-h-screen bg-gradient-to-b from-black to-blue-900 text-white p-8 space-y-16">
+
             {/* BIO */}
-            <section className="text-center max-w-4xl mx-auto mb-12">
-                <h1 className="text-3xl font-bold mb-4">{"WHY CHOOSE ME ?"}</h1>
-                <p className="text-lg">
+            <motion.section
+                className="text-center max-w-4xl mx-auto"
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <motion.h1
+                    className="text-3xl font-bold mb-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                >
+                    {"WHY CHOOSE ME ?"}
+                </motion.h1>
+                <motion.p
+                    className="text-lg"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                >
                     {"I'm"} <span className="font-semibold text-yellow-400">{"Djihadi Raftandjani"}</span>, {"a full-stack developer apprentice with a dual background in science and tech. I'm passionate about building efficient, innovative, and scalable solutions for real-world problems."}
-                </p>
-                <div className="mt-6">
+                </motion.p>
+                <motion.div
+                    className="mt-6"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6, duration: 0.5 }}
+                >
                     <a
                         href="/cv-raftandjani.pdf"
                         download
@@ -18,14 +44,18 @@ export default function AboutPage() {
                     >
                         {"📄 Download CV"}
                     </a>
-                </div>
-
-            </section>
+                </motion.div>
+            </motion.section>
 
             {/* MY VALUE */}
-            <section className="bg-[#181826] rounded-xl p-6  max-w-5xl mx-auto mb-12">
+            <motion.section
+                className="bg-[#181826] rounded-xl p-6 max-w-5xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+            >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaKey className="text-yellow-400" />{"My Value"}
+                    <FaKey className="text-yellow-400" /> {"My Value"}
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4 text-sm text-white/90">
                     <ul className="space-y-2 list-disc pl-5">
@@ -39,12 +69,17 @@ export default function AboutPage() {
                         <li>{"Skilled in animations, game development and UI/UX"}</li>
                     </ul>
                 </div>
-            </section>
+            </motion.section>
 
             {/* MY TECHNICAL EXPERTISE */}
-            <section className="bg-[#161624] rounded-xl p-6 max-w-5xl mx-auto mb-12">
+            <motion.section
+                className="bg-[#161624] rounded-xl p-6 max-w-5xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+            >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaTools className="text-yellow-400" />{" My Technical Expertise"}
+                    <FaTools className="text-yellow-400" /> {"My Technical Expertise"}
                 </h2>
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div>
@@ -58,7 +93,7 @@ export default function AboutPage() {
                         <p className="font-semibold text-yellow-400 mb-2">{"Frameworks"}</p>
                         <ul className="space-y-1">
                             <li>{"Django, Dear ImGui, Android Studio"}</li>
-                            <li>{"Qt Creator, MIT App Inventor, React"}</li>
+                            <li>{"Qt Creator, MIT App Inventor, React, Next"}</li>
                         </ul>
                     </div>
                     <div>
@@ -75,10 +110,15 @@ export default function AboutPage() {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
             {/* EDUCATION & EXPERIENCE */}
-            <section className="bg-[#161624] rounded-xl p-6 max-w-5xl mx-auto">
+            <motion.section
+                className="bg-[#161624] rounded-xl p-6 max-w-5xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+            >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
                     <FaGraduationCap className="text-yellow-400" /> {"Education & Experience"}
                 </h2>
@@ -104,27 +144,41 @@ export default function AboutPage() {
                         <p>{"Scientific Baccalauréat (Maths) — Mayotte"}</p>
                     </div>
                 </div>
-            </section>
-            <SkillGrid />
+            </motion.section>
+
+            {/* SKILLS GRID */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+            >
+                <SkillGrid />
+            </motion.div>
+
             {/* LANGUAGES & PERSONAL INFO */}
-            <section className="bg-[#161624] rounded-xl p-6 max-w-5xl mx-auto mt-12">
+            <motion.section
+                className="bg-[#161624] rounded-xl p-6 max-w-5xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+            >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaLanguage className="text-yellow-400" />{" Languages & Personal Info"}
+                    <FaLanguage className="text-yellow-400" /> {"Languages & Personal Info"}
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                     <div>
                         <p><span className="font-semibold">{"Languages:"}</span> {"Shibushi (native), French (native), English (C1)"}</p>
-                        <p className="mt-2"><span className="font-semibold">{"Location:"}</span>{" Rouen, France"}</p>
+                        <p className="mt-2"><span className="font-semibold">{"Location:"}</span> {"Rouen, France"}</p>
                     </div>
                     <div>
                         <p><span className="font-semibold">{"Driving License:"}</span> {"Permis B"}</p>
                         <p className="mt-2"><span className="font-semibold">{"Contact:"}</span> {"zanakan12maniac@proton.me"}</p>
                     </div>
                     <div>
-                        <p><span className="font-semibold">{"Interests:"}</span>{" Handball, Workout, Finance, Poetry"}</p>
+                        <p><span className="font-semibold">{"Interests:"}</span> {"Handball, Workout, Finance, Poetry"}</p>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
         </main>
     );
