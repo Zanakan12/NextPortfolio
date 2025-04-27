@@ -3,7 +3,7 @@ export default function HeroSection() {
     <section className="relative px-6 py-16">
       {/* Titre + description */}
       <div className="max-w-2xl">
-        <h2 className="text-4xl font-extrabold mb-4">ABOUTE ME</h2>
+        <h2 className="text-4xl font-extrabold mb-4">{"ABOUTE ME"}</h2>
         <div className="text-md leading-relaxed flex-col gap-4 flex">
          <p> {"I’m Djihadi Raftandjani, a full-stack developer apprentice with a passion for learning and solving complex challenges. I combine a strong scientific background with technical creativity, adaptability, and a solid foundation in modern web and system development."}</p>
          <p>{"My expertise spans Go, C++, Python, and Django, with hands-on experience in UI development, system monitoring tools, and intelligent robotics. I’m currently training at Zone01 Normandie, an intensive full-time coding school focused on autonomous and peer-to-peer learning."}</p>
