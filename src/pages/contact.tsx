@@ -42,7 +42,7 @@ export default function ContactPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Let's Work Together
+        {"Let's Work Together"}
       </motion.h1>
 
       {/* Petit texte */}
@@ -52,7 +52,7 @@ export default function ContactPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        I'm open to freelance opportunities, collaborations, or just a chat!
+        {"I'm open to freelance opportunities, collaborations, or just a chat!"}
       </motion.p>
 
       {/* Formulaire */}
@@ -65,7 +65,7 @@ export default function ContactPage() {
         transition={{ delay: 0.4, duration: 0.5 }}
       >
         <div>
-          <label className="block mb-2 text-sm font-medium text-gray-200">Your Name</label>
+          <label className="block mb-2 text-sm font-medium text-gray-200">{"Your Name"}</label>
           <input
             type="text"
             name="user_name"
@@ -75,7 +75,7 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <label className="block mb-2 text-sm font-medium text-gray-200">Your Email</label>
+          <label className="block mb-2 text-sm font-medium text-gray-200">{"Your Email"}</label>
           <input
             type="email"
             name="user_email"
@@ -85,7 +85,7 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <label className="block mb-2 text-sm font-medium text-gray-200">Your Message</label>
+          <label className="block mb-2 text-sm font-medium text-gray-200">{"Your Message"}</label>
           <textarea
             name="message"
             className="w-full p-3 h-32 rounded-xl bg-[#1f1f2e] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
@@ -99,14 +99,14 @@ export default function ContactPage() {
             type="submit"
             className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
           >
-            Send Message ✉️
+            {"Send Message ✉️"}
           </button>
         </div>
 
         {/* Message succès */}
         {success && (
           <p className="text-green-400 text-center mt-4">
-            Your message has been sent successfully! 🚀
+            {"Your message has been sent successfully! 🚀"}
           </p>
         )}
       </motion.form>

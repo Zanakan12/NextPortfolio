@@ -54,7 +54,7 @@ export default function ServicesPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Here's how I can help you: I build solid, modern, and high-performance solutions.
+        {"Here's how I can help you: I build solid, modern, and high-performance solutions."}
       </motion.p>
 
       {/* Grille des services */}
@@ -86,7 +86,7 @@ export default function ServicesPage() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Me 🚀
+            {"Contact Me"} 🚀
           </motion.button>
         </Link>
       </div>
