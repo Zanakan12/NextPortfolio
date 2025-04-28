@@ -109,7 +109,8 @@ const projects = [
     title: "PwdSecure",
     category: "DESKTOP APP",
     github: "https://github.com/Zanakan12/PwdSecure",
-    site: false,
+    site:"",
+    cardState: false,
   },
   {
     image: "default.png",
@@ -148,7 +149,8 @@ const projects = [
     title: "net-cat",
     category: "NETWORK / GO",
     github: "https://github.com/Zanakan12/net-cat",
-    site: false,
+    site: "",
+    cardState: false,
   },
   {
     image: "default.png",
