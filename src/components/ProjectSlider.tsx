@@ -44,7 +44,7 @@ const projects = [
     title: "ZK12BIKE",
     category: "WEBSITE / GO / E-COMMERCE",
     github: "https://github.com/Zanakan12/ZK12BIKE",
-    site: "",
+    site: "https://zk12ebike.zanakan.fr",
     cardState: false,
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     category: "UI / JAVASCRIPT",
     github: "https://github.com/Zanakan12/sortable",
     site: "https://sortable.zanakan.fr",
-    cardState: true,
+    cardState: false,
   },
   {
     image: "default.png",
