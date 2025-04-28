@@ -13,6 +13,7 @@ const projects = [
     category: "DESKTOP APP / C++",
     github: "https://github.com/Zanakan12/system-monitor",
     site: "",
+    cardState:false,
   },
   {
     image: "netfix.png",
@@ -20,6 +21,7 @@ const projects = [
     category: "WEBSITE / DJANGO",
     github: "https://github.com/Zanakan12/netfix",
     site: "",
+    cardState:false,
   },
   {
     image: "real-time-forum.png",
@@ -27,6 +29,7 @@ const projects = [
     category: "WEBSITE / GO",
     github: "https://github.com/Zanakan12/real-time-forum-team",
     site: "",
+    cardState:false,
   },
   {
     image: "tetris.png",
@@ -34,6 +37,7 @@ const projects = [
     category: "GAME / JAVASCRIPT",
     github: "https://github.com/Zanakan12/tetris-game",
     site: "https://tetris.zanakan.fr",
+    cardState:false,
   },
   {
     image: "zk12ebike.png",
@@ -41,6 +45,7 @@ const projects = [
     category: "WEBSITE / GO / E-COMMERCE",
     github: "https://github.com/Zanakan12/ZK12BIKE",
     site: "",
+    cardState:false,
   },
   {
     image: "sortable.png",
@@ -48,6 +53,7 @@ const projects = [
     category: "UI / JAVASCRIPT",
     github: "https://github.com/Zanakan12/sortable",
     site: "https://sortable.zanakan.fr",
+    cardState:true,
   },
   {
     image: "default.png",
@@ -55,6 +61,7 @@ const projects = [
     category: "DESKTOP APP / C++",
     github: "https://github.com/Zanakan12/pdfInvoiceUi",
     site: "",
+    cardState:true,
   },
   {
     image: "default.png",
@@ -62,6 +69,7 @@ const projects = [
     category: "API / TYPESCRIPT",
     github: "https://github.com/Zanakan12/graphQL",
     site: "",
+    cardState:false,
   },
   {
     image: "default.png",
@@ -69,6 +77,7 @@ const projects = [
     category: "AI / PYTHON",
     github: "https://github.com/Zanakan12/autonomeCar",
     site: "",
+    cardState:false,
   },
   {
     image: "default.png",
@@ -76,6 +85,7 @@ const projects = [
     category: "DATA / PYTHON",
     github: "https://github.com/Zanakan12/numpy",
     site: "",
+    cardState:false,
   },
   {
     image: "default.png",
@@ -83,27 +93,23 @@ const projects = [
     category: "GAME / GO",
     github: "https://github.com/Zanakan12/Guess-it",
     site: "",
+    cardState:false,
   },
-  {
-    image: "default.png",
-    title: "Pdf-to-Table-Invoice",
-    category: "DESKTOP APP / C++",
-    github: "https://github.com/Zanakan12/Pdf-to-Table-Invoice",
-    site: "",
-  },
+  
   {
     image: "default.png",
     title: "fakeSms",
     category: "MOBILE APP / JAVA",
     github: "https://github.com/Zanakan12/fakeSms",
     site: "",
+    cardState:true,
   },
   {
     image: "default.png",
     title: "PwdSecure",
     category: "DESKTOP APP",
     github: "https://github.com/Zanakan12/PwdSecure",
-    site: "",
+    site: false,
   },
   {
     image: "default.png",
@@ -111,6 +117,7 @@ const projects = [
     category: "GAME / JAVASCRIPT",
     github: "https://github.com/Zanakan12/crossword",
     site: "",
+    cardState:false,
   },
   {
     image: "default.png",
@@ -118,6 +125,7 @@ const projects = [
     category: "TRAINING / JAVASCRIPT",
     github: "https://github.com/Zanakan12/piscine-js",
     site: "",
+    cardState:false,
   },
   {
     image: "default.png",
@@ -125,6 +133,7 @@ const projects = [
     category: "TOOL / GO",
     github: "https://github.com/Zanakan12/ascii-art-color",
     site: "",
+    cardState:false,
   },
   {
     image: "default.png",
@@ -132,13 +141,14 @@ const projects = [
     category: "TOOL / GO",
     github: "https://github.com/Zanakan12/tetris-optimizer",
     site: "",
+    cardState:false,
   },
   {
     image: "default.png",
     title: "net-cat",
     category: "NETWORK / GO",
     github: "https://github.com/Zanakan12/net-cat",
-    site: "",
+    site: false,
   },
   {
     image: "default.png",
@@ -146,13 +156,15 @@ const projects = [
     category: "DESKTOP APP / C",
     github: "https://github.com/Zanakan12/atm-management-system",
     site: "",
+    cardState:false,
   },
-  {
+  { 
     image: "default.png",
     title: "forum",
     category: "WEBSITE / GO",
     github: "https://github.com/Zanakan12/forum",
     site: "",
+    cardState:false,
   }
 ];
 
@@ -169,23 +181,27 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
     ? projects
     : projects.filter((p) => p.category.includes(activeCategory));
 
-  const displayedProjects = [...filteredProjects]; // ➔ Double pour la boucle
+  const displayedProjects = [...filteredProjects]; // On double toujours
+
+  const CARD_WIDTH = 350;
+  const GAP = 24;
+  const totalWidth = displayedProjects.length * (CARD_WIDTH + GAP);
+
+  useEffect(() => {
+    x.set(-totalWidth / 4 + window.innerWidth / 2 - CARD_WIDTH / 2);
+  }, [totalWidth]);
 
   useAnimationFrame((time, delta) => {
     if (!isPaused) {
-      x.set(x.get() - delta * 0.05); // 0.05 = vitesse du slider
+      x.set(x.get() - delta * 0.05);
+
+      // ➔ Correction PRO ici
+      const position = x.get();
+      if (position <= -totalWidth / 2) {
+        x.set(0); // recale proprement au milieu
+      }
     }
   });
-
-  useEffect(() => {
-    const unsubscribe = x.onChange((latest) => {
-      const totalWidth = filteredProjects.length * 350; // 350 = largeur estimée d'une carte (ajuste selon ta card)
-      if (latest <= -totalWidth) {
-        x.set(0); // ➔ Reviens au début sans secousse
-      }
-    });
-    return () => unsubscribe();
-  }, [x, filteredProjects.length]);
 
   return (
     <div className="overflow-hidden w-full bg-black py-10">
@@ -201,13 +217,14 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
           onMouseLeave={() => setIsPaused(false)}
         >
           {displayedProjects.map((project, index) => (
-            <div key={index} className="flex-shrink-0 w-[300px]"> {/* width fixée pour bien calculer */}
+            <div key={index} className="flex-shrink-0 w-[350px]">
               <ProjectCard
                 image={project.image}
                 title={project.title}
                 github={project.github}
                 site={project.site}
                 badge={project.site ? "LIVE" : "SOON"}
+                cardState={project.cardState}
               />
             </div>
           ))}

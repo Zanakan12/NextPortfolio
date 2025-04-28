@@ -7,17 +7,28 @@ interface ProjectCardProps {
   github: string;
   site: string;
   badge: "LIVE" | "SOON";
+  cardState?: boolean;
 }
 
-export default function ProjectCard({ image, title, github, site, badge }: ProjectCardProps) {
+export default function ProjectCard({ image, title, github, site, badge, cardState }: ProjectCardProps) {
   const badgeColor = badge === "LIVE" ? "bg-green-500" : "bg-yellow-400";
   const badgeTextColor = badge === "LIVE" ? "text-white" : "text-black";
 
+  const state = cardState ? "PRIVATE" : "PUBLIC";
+  const stateBadgeColor = cardState ? "bg-red-500" : "bg-green-500";
+  const stateBadgeTextColor = "text-white";
+
   return (
     <div className="relative group bg-zinc-900 rounded-3xl overflow-hidden text-white w-64 h-80 border border-white/10 shadow-md hover:scale-105 transition-transform">
-      {/* Badge en haut à gauche */}
+      
+      {/* Badge LIVE / SOON à gauche */}
       <div className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold ${badgeColor} ${badgeTextColor}`}>
         {badge}
+      </div>
+
+      {/* Badge PUBLIC / PRIVATE à droite */}
+      <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold ${stateBadgeColor} ${stateBadgeTextColor}`}>
+        {state}
       </div>
 
       {/* Image */}
