@@ -13,7 +13,7 @@ const projects = [
     category: "DESKTOP APP / C++",
     github: "https://github.com/Zanakan12/system-monitor",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "netfix.png",
@@ -21,7 +21,7 @@ const projects = [
     category: "WEBSITE / DJANGO",
     github: "https://github.com/Zanakan12/netfix",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "real-time-forum.png",
@@ -29,7 +29,7 @@ const projects = [
     category: "WEBSITE / GO",
     github: "https://github.com/Zanakan12/real-time-forum-team",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "tetris.png",
@@ -37,7 +37,7 @@ const projects = [
     category: "GAME / JAVASCRIPT",
     github: "https://github.com/Zanakan12/tetris-game",
     site: "https://tetris.zanakan.fr",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "zk12ebike.png",
@@ -45,7 +45,7 @@ const projects = [
     category: "WEBSITE / GO / E-COMMERCE",
     github: "https://github.com/Zanakan12/ZK12BIKE",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "sortable.png",
@@ -53,7 +53,7 @@ const projects = [
     category: "UI / JAVASCRIPT",
     github: "https://github.com/Zanakan12/sortable",
     site: "https://sortable.zanakan.fr",
-    cardState:true,
+    cardState: true,
   },
   {
     image: "default.png",
@@ -61,7 +61,7 @@ const projects = [
     category: "DESKTOP APP / C++",
     github: "https://github.com/Zanakan12/pdfInvoiceUi",
     site: "",
-    cardState:true,
+    cardState: true,
   },
   {
     image: "default.png",
@@ -69,7 +69,7 @@ const projects = [
     category: "API / TYPESCRIPT",
     github: "https://github.com/Zanakan12/graphQL",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "default.png",
@@ -77,7 +77,7 @@ const projects = [
     category: "AI / PYTHON",
     github: "https://github.com/Zanakan12/autonomeCar",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "default.png",
@@ -85,7 +85,7 @@ const projects = [
     category: "DATA / PYTHON",
     github: "https://github.com/Zanakan12/numpy",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "default.png",
@@ -93,16 +93,16 @@ const projects = [
     category: "GAME / GO",
     github: "https://github.com/Zanakan12/Guess-it",
     site: "",
-    cardState:false,
+    cardState: false,
   },
-  
+
   {
     image: "default.png",
     title: "fakeSms",
     category: "MOBILE APP / JAVA",
     github: "https://github.com/Zanakan12/fakeSms",
     site: "",
-    cardState:true,
+    cardState: true,
   },
   {
     image: "default.png",
@@ -117,7 +117,7 @@ const projects = [
     category: "GAME / JAVASCRIPT",
     github: "https://github.com/Zanakan12/crossword",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "default.png",
@@ -125,7 +125,7 @@ const projects = [
     category: "TRAINING / JAVASCRIPT",
     github: "https://github.com/Zanakan12/piscine-js",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "default.png",
@@ -133,7 +133,7 @@ const projects = [
     category: "TOOL / GO",
     github: "https://github.com/Zanakan12/ascii-art-color",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "default.png",
@@ -141,7 +141,7 @@ const projects = [
     category: "TOOL / GO",
     github: "https://github.com/Zanakan12/tetris-optimizer",
     site: "",
-    cardState:false,
+    cardState: false,
   },
   {
     image: "default.png",
@@ -156,15 +156,15 @@ const projects = [
     category: "DESKTOP APP / C",
     github: "https://github.com/Zanakan12/atm-management-system",
     site: "",
-    cardState:false,
+    cardState: false,
   },
-  { 
+  {
     image: "default.png",
     title: "forum",
     category: "WEBSITE / GO",
     github: "https://github.com/Zanakan12/forum",
     site: "",
-    cardState:false,
+    cardState: false,
   }
 ];
 
@@ -222,7 +222,7 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
                 image={project.image}
                 title={project.title}
                 github={project.github}
-                site={project.site}
+                site={project.site || ""}
                 badge={project.site ? "LIVE" : "SOON"}
                 cardState={project.cardState}
               />
