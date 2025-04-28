@@ -224,7 +224,7 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
                 image={project.image}
                 title={project.title}
                 github={project.github}
-                site={project.site || ""}
+                site={project.site}
                 badge={project.site ? "LIVE" : "SOON"}
                 cardState={project.cardState}
               />
