@@ -28,7 +28,7 @@ const projects = [
     title: "Real-Time Forum Team",
     category: "WEBSITE / GO",
     github: "https://github.com/Zanakan12/real-time-forum-team",
-    site: "real-time-forum.zanakan.fr",
+    site: "https://real-time-forum.zanakan.fr",
     cardState: false,
   },
   {
