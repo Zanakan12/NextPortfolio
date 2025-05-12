@@ -68,7 +68,7 @@ const projects = [
     title: "graphQL",
     category: "API / TYPESCRIPT",
     github: "https://github.com/Zanakan12/graphQL",
-    site: "",
+    site: "https://graph-ql.zanakan.fr/",
     cardState: false,
   },
   {
