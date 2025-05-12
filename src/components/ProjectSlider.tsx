@@ -64,7 +64,7 @@ const projects = [
     cardState: true,
   },
   {
-    image: "default.png",
+    image: "graph_ql.png",
     title: "graphQL",
     category: "API / TYPESCRIPT",
     github: "https://github.com/Zanakan12/graphQL",
