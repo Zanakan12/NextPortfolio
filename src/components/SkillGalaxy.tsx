@@ -3,6 +3,8 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import { useMemo } from "react";
+import Image from "next/image";
+
 
 const skills = [
   { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
@@ -59,11 +61,13 @@ function SkillSphere() {
             distanceFactor={1.5} // 👈 agrandit l'élément HTML dans la scène
             style={{ pointerEvents: "none" }} // pour éviter les clics bloquants
           >
-            <img
+            <Image
               src={item.skill.icon}
               alt={item.skill.name}
               title={item.skill.name}
-              className="w-52 h-52 object-contain border rounded-full bg-white"
+              width={64}
+              height={64}
+              className="object-contain border rounded-full bg-white"
             />
           </Html>
         </mesh>

@@ -191,7 +191,8 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
 
   useEffect(() => {
     x.set(-totalWidth / 4 + window.innerWidth / 2 - CARD_WIDTH / 2);
-  }, [totalWidth]);
+  }, [totalWidth, x]); // ✅
+  
 
   useAnimationFrame((time, delta) => {
     if (!isPaused) {
