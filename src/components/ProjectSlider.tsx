@@ -21,7 +21,7 @@ const projects = [
     category: "WEBSITE / TYPESCRIPT",
     github: "https://github.com/Zanakan12/barber-website",
     site: "https://barber.zanakan.fr/",
-    cardState: false,
+    cardState: true,
   },
   {
     image: "netfix.png",
