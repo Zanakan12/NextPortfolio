@@ -16,7 +16,7 @@ const projects = [
     cardState: false,
   },
   {
-    image: "default.png",
+    image: "barber.png",
     title: "Barber Website",
     category: "WEBSITE / TYPESCRIPT",
     github: "https://github.com/Zanakan12/barber-website",
