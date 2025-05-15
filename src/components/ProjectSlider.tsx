@@ -16,6 +16,14 @@ const projects = [
     cardState: false,
   },
   {
+    image: "default.png",
+    title: "Barber Website",
+    category: "WEBSITE / TYPESCRIPT",
+    github: "https://github.com/Zanakan12/barber-website",
+    site: "https://barber.zanakan.fr/",
+    cardState: false,
+  },
+  {
     image: "netfix.png",
     title: "Netfix",
     category: "WEBSITE / DJANGO",
