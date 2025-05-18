@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import { useMemo } from "react";
 import Image from "next/image";
+import StarsBackground from "./StarBackground";
 
 
 const skills = [
@@ -53,20 +54,20 @@ function SkillSphere() {
     <>
       {positions.map((item, i) => (
         <mesh key={i} position={item.position}>
-          <sphereGeometry args={[0.2, 42, 42]} />
-          <meshStandardMaterial color="orange" />
+          <sphereGeometry args={[0.2, 50, 50]} />
+          <meshStandardMaterial color="" />
           <Html
             center
             transform
-            distanceFactor={1.5} // 👈 agrandit l'élément HTML dans la scène
-            style={{ pointerEvents: "none" }} // pour éviter les clics bloquants
+            distanceFactor={1.5}
+            style={{ pointerEvents: "none" }}
           >
             <Image
               src={item.skill.icon}
               alt={item.skill.name}
               title={item.skill.name}
-              width={64}
-              height={64}
+              width={100}
+              height={100}
               className="object-contain border rounded-full bg-white"
             />
           </Html>
@@ -78,7 +79,7 @@ function SkillSphere() {
 
 export default function SkillGalaxy() {
   return (
-    <div className="w-full h-[600px]">
+    <div className="w-full h-[700px]">
       <Canvas camera={{ position: [0, 0, 12], fov: 60 }}>
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />

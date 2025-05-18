@@ -9,7 +9,7 @@ export default function Footer() {
 
                 <div className="flex flex-col sm:flex-row gap-8">
                     <div>
-                        {"🇫🇷 ZONE 01 ROUEN"}
+                        {"ZONE 01 ROUEN  🇫🇷"}
                     </div>
                 </div>
             </div>

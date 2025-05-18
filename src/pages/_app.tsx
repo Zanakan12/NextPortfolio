@@ -1,6 +1,19 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+// pages/_app.tsx
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+import { useEffect } from 'react'
+
+function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // durée de l'animation
+      once: true,     // animation seulement une fois
+    })
+  }, [])
+
+  return <Component {...pageProps} />
 }
+
+export default MyApp

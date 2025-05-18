@@ -8,6 +8,8 @@ import ImageGallery from '../components/ImageGallery';
 import InstagramPhoto from '@/components/Photo';
 import ServicesPage from '../components/Service';
 import { RainbowButton } from "../components/ui/rainbow-button";
+import SkillGalaxy from '@/components/SkillGalaxy';
+import StarsBackground from '@/components/StarBackground';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -24,6 +26,7 @@ export default function Home() {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-r from-black to-blue-800 text-white">
+      <StarsBackground />
       <div className="px-15">
         <Header />
         <HeroSection />
@@ -33,9 +36,9 @@ export default function Home() {
         <section className=" text-white absolute right-45 top-17 ">
           <ImageGallery images={myImages} />
         </section>
-        <section>
+        <section data-aos="fade-up">
           <h2 className="flex justify-center text-2xl font-bold mb-6 text-white pt-15 ">LAST PROJECT</h2>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-6xl mx-auto ">
               <InstagramPhoto src="/projects/graph_ql.png" />
               <InstagramPhoto src="/projects/barber.png" />
               <InstagramPhoto src="/projects/real-time-forum.png" />
@@ -43,16 +46,21 @@ export default function Home() {
           </div>
         </section>
         
-        <section className="flex justify-center mt-10 rounded-md pt-15">
+        <section id="project-slider" className="flex justify-center mt-10 rounded-md pt-15">
           <CategoryFilter
             activeCategory={activeCategory}
             setActiveCategory={setActiveCategory}
           />
         </section>
-        <section>
+
+        <section data-aos="zoom-in">
           <ProjectSlider activeCategory={activeCategory} />
         </section>
-        <section>
+        <section id="skills">
+          <SkillGalaxy />
+        </section>
+        
+        <section id="service">
           <ServicesPage />
         </section>
         </div>

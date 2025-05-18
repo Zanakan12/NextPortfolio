@@ -82,7 +82,7 @@ export default function ServicesPage() {
 
       {/* Bouton "Contact Me" */}
       {!showContact && (
-        <div className="flex justify-center mt-16">
+        <div id="contact" className="flex justify-center mt-16">
           <motion.button
             onClick={() => setShowContact(true)}
             className="bg-blue-400 hover:bg-blue-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
