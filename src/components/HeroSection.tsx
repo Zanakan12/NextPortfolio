@@ -1,15 +1,6 @@
-import { useState } from "react";
+
 
 export default function HeroSection() {
-  const [openModal, setOpenModal] = useState(false);
-
-  const handleOpen = () => {
-    setOpenModal(true);
-  };
-
-  const handleClose = () => {
-    setOpenModal(false);
-  };
 
   return (
     <section className="relative px-6 py-16 rounded">
