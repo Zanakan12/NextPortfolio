@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import { useMemo } from "react";
 import Image from "next/image";
-import StarsBackground from "./StarBackground";
 
 
 const skills = [
