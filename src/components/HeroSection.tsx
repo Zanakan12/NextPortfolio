@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative px-6 py-16 rounded">
       {/* Titre + description */}
       <div className="max-w-2xl">
-        <h2 className="text-4xl font-extrabold mb-4">{"ABOUT ME"}</h2>
+        <h2 className="text-xl font-extrabold mb-4">{"WHO AM I ?"}</h2>
         <div className="text-md leading-relaxed flex-col gap-4 flex">
           <p>
             {"I’m Djihadi Raftandjani, a full-stack developer apprentice with a passion for learning and solving complex challenges. I combine a strong scientific background with technical creativity, adaptability, and a solid foundation in modern web and system development."}

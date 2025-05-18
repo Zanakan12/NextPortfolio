@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import StarsBackground from "./StarBackground";
 
 
 
@@ -214,34 +215,37 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
     }
   });
 
-  return (
-    <div className="overflow-hidden w-full bg-black py-10 rounded-2xl border">
-      {filteredProjects.length === 0 ? (
-        <div className="text-center text-white text-xl py-20">
-          No projects available for this category.
-        </div>
-      ) : (
-        
-        <motion.div
-          className="flex gap-6 w-max"
-          style={{ x }}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {displayedProjects.map((project, index) => (
-            <div key={index} className="flex-shrink-0 w-[350px]">
-              <ProjectCard
-                image={project.image}
-                title={project.title}
-                github={project.github}
-                site={project.site}
-                badge={project.site ? "LIVE" : "SOON"}
-                cardState={project.cardState}
-              />
-            </div>
-          ))}
-        </motion.div>
-      )}
+   return (
+    <div className="relative overflow-hidden w-full py-10 rounded-2xl border bg-black">
+      <StarsBackground />
+
+      <div className="relative z-10">
+        {filteredProjects.length === 0 ? (
+          <div className="text-center text-white text-xl py-20">
+            No projects available for this category.
+          </div>
+        ) : (
+          <motion.div
+            className="flex gap-6 w-max"
+            style={{ x }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {displayedProjects.map((project, index) => (
+              <div key={index} className="flex-shrink-0 w-[350px]">
+                <ProjectCard
+                  image={project.image}
+                  title={project.title}
+                  github={project.github}
+                  site={project.site}
+                  badge={project.site ? "LIVE" : "SOON"}
+                  cardState={project.cardState}
+                />
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 }

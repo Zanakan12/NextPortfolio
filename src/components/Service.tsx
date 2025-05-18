@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useState } from "react";
+import ContactPage from "../components/Contact";
 
 const services = [
   {
@@ -37,15 +38,16 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const [showContact, setShowContact] = useState(false);
   return (
-    <div className="min-h-screen text-white p-8">
+    <div className="min-h-screen text-white pt-25 ">
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center mb-8 text-yellow-400"
+        className="text-4xl md:text-3xl font-bold text-center mb-8 text-white"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {"My Services"}
+        {"SERVICES"}
       </motion.h1>
 
       <motion.p
@@ -58,7 +60,7 @@ export default function ServicesPage() {
       </motion.p>
 
       {/* Grille des services */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-4xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -68,10 +70,10 @@ export default function ServicesPage() {
             transition={{ delay: 0.1 * index }}
           >
             {/* Effet gradient lumineux */}
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-pink-500 opacity-0 group-hover:opacity-20 transition duration-500 rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-gray-500 opacity-0 group-hover:opacity-20 transition duration-500 rounded-2xl border" />
             <div className="relative z-10 flex flex-col items-start">
               <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-yellow-400 mb-3">{service.title}</h3>
+              <h3 className="text-2xl font-bold text-blue-400 mb-3">{service.title}</h3>
               <p className="text-gray-400">{service.description}</p>
             </div>
           </motion.div>
@@ -79,17 +81,21 @@ export default function ServicesPage() {
       </div>
 
       {/* Bouton "Contact Me" */}
-      <div className="flex justify-center mt-16">
-        <Link href="/contact" passHref>
+      {!showContact && (
+        <div className="flex justify-center mt-16">
           <motion.button
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
+            onClick={() => setShowContact(true)}
+            className="bg-blue-400 hover:bg-blue-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            {"Contact Me"} 🚀
+            {"Contact Me"}
           </motion.button>
-        </Link>
-      </div>
+        </div>
+      )}
+
+      {/* Composant Contact affiché après clic */}
+      {showContact && <ContactPage />}
     </div>
   );
 }

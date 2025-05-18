@@ -15,10 +15,10 @@ export default function ContactPage() {
 
     emailjs
       .sendForm(
-        "service_1vhq5kt",   // <-  Service ID
-        "template_2tm625e",  // <-  Template ID
+        "service_1vhq5kt",
+        "template_2tm625e",
         form.current,
-        "H4ZaRHJdKaVp2lwIi"    // <- Public Key
+        "H4ZaRHJdKaVp2lwIi"
       )
       .then(
         (result) => {
@@ -34,10 +34,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen  text-white p-8 flex flex-col items-center">
+    <div className="bg-gradient from-black to-blue-800 text-white p-8 flex flex-col items-center mt-25">
       {/* Titre */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center mb-8 text-yellow-400"
+        className="text-4xl md:text-3xl font-bold text-center mb-8 text-blue-400"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -69,7 +69,7 @@ export default function ContactPage() {
           <input
             type="text"
             name="user_name"
-            className="w-full p-3 rounded-xl bg-[#1f1f2e] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full p-3 rounded-xl bg-[#1f1f2e] text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
             required
           />
         </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
           <input
             type="email"
             name="user_email"
-            className="w-full p-3 rounded-xl bg-[#1f1f2e] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full p-3 rounded-xl bg-[#1f1f2e] text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
             required
           />
         </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
           <label className="block mb-2 text-sm font-medium text-gray-200">{"Your Message"}</label>
           <textarea
             name="message"
-            className="w-full p-3 h-32 rounded-xl bg-[#1f1f2e] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+            className="w-full p-3 h-32 rounded-xl bg-[#1f1f2e] text-white focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
             required
           />
         </div>
@@ -97,9 +97,9 @@ export default function ContactPage() {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
+            className="bg-blue-400 hover:bg-blue-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
           >
-            {"Send Message ✉️"}
+            {"Send Message"}
           </button>
         </div>
 
