@@ -199,7 +199,7 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
 
   useEffect(() => {
     x.set(-totalWidth / 4 + window.innerWidth / 2 - CARD_WIDTH / 2);
-  }, [totalWidth, x]); // ✅
+  }, [totalWidth, x]);
   
 
   useAnimationFrame((time, delta) => {
@@ -215,12 +215,13 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
   });
 
   return (
-    <div className="overflow-hidden w-full bg-black py-10">
+    <div className="overflow-hidden w-full bg-black py-10 rounded-2xl border">
       {filteredProjects.length === 0 ? (
         <div className="text-center text-white text-xl py-20">
           No projects available for this category.
         </div>
       ) : (
+        
         <motion.div
           className="flex gap-6 w-max"
           style={{ x }}

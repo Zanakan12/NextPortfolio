@@ -12,7 +12,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative px-6 py-16">
+    <section className="relative px-6 py-16 rounded">
       {/* Titre + description */}
       <div className="max-w-2xl">
         <h2 className="text-4xl font-extrabold mb-4">{"ABOUT ME"}</h2>
@@ -30,7 +30,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bouton circulaire "PLAY SHOWREEL" */}
-      <div
+      {/* <div
         className="absolute right-2 top-12 transform -translate-y-1/2"
         onClick={handleOpen}
       >
@@ -43,10 +43,10 @@ export default function HeroSection() {
             {"SHOWREEL"}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Popup Modale pour la vidéo */}
-      {openModal && (
+      {/* {openModal && (
         <div className="fixed inset-0 bg-opacity-70 z-50" onClick={handleClose}>
           <div
             className="absolute top-88 right-1 bg-transparent rounded-lg overflow-hidden"
@@ -66,9 +66,7 @@ export default function HeroSection() {
               className="rounded-md shadow-lg"
             />
           </div>
-        </div>
-
-      )}
+        </div> */}
     </section>
   );
 }

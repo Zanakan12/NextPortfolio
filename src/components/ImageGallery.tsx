@@ -21,7 +21,7 @@ export default function ImageSlider({ images }: ImageSliderProps) {
 
   return (
     <section className="flex flex-col items-center justify-center pt-10">
-      <div className="relative w-70 h-40 rounded-full overflow-hidden shadow-lg border-4 border-blue-400">
+      <div className="relative w-100 h-100 rounded-full overflow-hidden shadow-lg border-2 border-white">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}

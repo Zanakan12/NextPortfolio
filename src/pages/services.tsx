@@ -38,9 +38,9 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
+    <div className="min-h-screen text-white p-8 pt-25 ">
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center mb-8 text-yellow-400"
+        className="text-4xl md:text-5xl font-bold text-center mb-8 text-white"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -68,7 +68,7 @@ export default function ServicesPage() {
             transition={{ delay: 0.1 * index }}
           >
             {/* Effet gradient lumineux */}
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-pink-500 opacity-0 group-hover:opacity-20 transition duration-500 rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-gray-500 opacity-0 group-hover:opacity-20 transition duration-500 rounded-2xl border" />
             <div className="relative z-10 flex flex-col items-start">
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-2xl font-bold text-yellow-400 mb-3">{service.title}</h3>
