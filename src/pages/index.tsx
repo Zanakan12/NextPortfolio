@@ -25,7 +25,7 @@ export default function Home() {
     { src: "/images/githubProfile8.jpg", alt: "Photo 8" },*/
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black to-blue-800 text-white">
+    <div className="min-h-screen bg-gradient-to-r from-black to-blue-200 text-white">
       <StarsBackground />
       <div className="px-15">
         <Header />
@@ -37,7 +37,7 @@ export default function Home() {
           <ImageGallery images={myImages} />
         </section>
         <section data-aos="fade-up">
-          <h2 className="flex justify-center text-2xl font-bold mb-6 text-white pt-15 ">LAST PROJECT</h2>
+          <h2 className="flex justify-center text-2xl font-bold text-white pt-15 ">LAST PROJECT</h2>
           <div className="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-6xl mx-auto ">
               <InstagramPhoto src="/projects/graph_ql.png" />
               <InstagramPhoto src="/projects/barber.png" />
@@ -54,11 +54,12 @@ export default function Home() {
         </section>
 
         <section data-aos="zoom-in">
+          <StarsBackground />
           <ProjectSlider activeCategory={activeCategory} />
         </section>
 
         <section id="skills" >
-          <div className="flex justify-center text-3xl py-25">SKILLS</div>
+          <span className="flex items-center justify-center text-2xl p-15">SKILLS</span>
           <SkillGalaxy />
         </section>
         

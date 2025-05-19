@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import StarsBackground from "./StarBackground";
@@ -198,6 +198,32 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
   const GAP = 24;
   const totalWidth = displayedProjects.length * (CARD_WIDTH + GAP);
 
+  const scrollInterval = useRef<NodeJS.Timeout | null>(null);
+
+  const startScrolling = (direction: "left" | "right") => {
+    if (scrollInterval.current) return;
+    scrollInterval.current = setInterval(() => {
+      x.set(x.get() + (direction === "left" ? CARD_WIDTH + GAP : -CARD_WIDTH - GAP) * 0.05);
+    }, 16); // ~60fps
+  };
+
+  const stopScrolling = () => {
+    if (scrollInterval.current) {
+      clearInterval(scrollInterval.current);
+      scrollInterval.current = null;
+    }
+  };
+
+  useEffect(() => {
+    const clearOnRelease = () => stopScrolling();
+    window.addEventListener("mouseup", clearOnRelease);
+    window.addEventListener("touchend", clearOnRelease);
+    return () => {
+      window.removeEventListener("mouseup", clearOnRelease);
+      window.removeEventListener("touchend", clearOnRelease);
+    };
+  }, []);
+
   useEffect(() => {
     x.set(-totalWidth / 4 + window.innerWidth / 2 - CARD_WIDTH / 2);
   }, [totalWidth, x]);
@@ -215,37 +241,66 @@ export default function ProjectSlider({ activeCategory }: ProjectSliderProps) {
     }
   });
 
-   return (
-    <div className="relative overflow-hidden w-full py-10 rounded-2xl border bg-black">
+  return (
+    <div className="relative overflow-hidden w-full py-10 rounded-2xl border bg-black mb-25">
       <StarsBackground />
-
+  
+      {/* CONTENU SLIDER */}
       <div className="relative z-10">
         {filteredProjects.length === 0 ? (
           <div className="text-center text-white text-xl py-20">
             No projects available for this category.
           </div>
         ) : (
-          <motion.div
-            className="flex gap-6 w-max"
-            style={{ x }}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            {displayedProjects.map((project, index) => (
-              <div key={index} className="flex-shrink-0 w-[350px]">
-                <ProjectCard
-                  image={project.image}
-                  title={project.title}
-                  github={project.github}
-                  site={project.site}
-                  badge={project.site ? "LIVE" : "SOON"}
-                  cardState={project.cardState}
-                />
-              </div>
-            ))}
-          </motion.div>
+          <>
+            <motion.div
+              className="flex gap-6 w-max"
+              style={{ x }}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
+              {displayedProjects.map((project, index) => (
+                <div key={index} className="flex-shrink-0 w-[350px]">
+                  <ProjectCard
+                    image={project.image}
+                    title={project.title}
+                    github={project.github}
+                    site={project.site}
+                    badge={project.site ? "LIVE" : "SOON"}
+                    cardState={project.cardState}
+                  />
+                </div>
+              ))}
+            </motion.div>
+  
+            {/* BOUTONS EN DESSOUS */}
+            <div className="mt-6 flex justify-center gap-4">
+              <button
+                onMouseDown={() => startScrolling("left")}
+                onMouseUp={stopScrolling}
+                onMouseLeave={stopScrolling}
+                onTouchStart={() => startScrolling("left")}
+                onTouchEnd={stopScrolling}
+                className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full backdrop-blur"
+              >
+                ←
+              </button>
+
+              <button
+                onMouseDown={() => startScrolling("right")}
+                onMouseUp={stopScrolling}
+                onMouseLeave={stopScrolling}
+                onTouchStart={() => startScrolling("right")}
+                onTouchEnd={stopScrolling}
+                className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full backdrop-blur"
+              >
+                →
+              </button>
+            </div>
+          </>
         )}
       </div>
     </div>
   );
+  
 }
