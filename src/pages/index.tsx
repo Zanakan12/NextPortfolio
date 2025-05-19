@@ -36,15 +36,28 @@ export default function Home() {
         <section className=" text-white absolute right-45 top-17 ">
           <ImageGallery images={myImages} />
         </section>
+
         <section data-aos="fade-up">
-          <h2 className="flex justify-center text-2xl font-bold text-white pt-15 ">LAST PROJECT</h2>
-          <div className="grid grid-cols-4 md:grid-cols-4 gap-4 max-w-5xl mx-auto ">
+          <h2 className="flex justify-center text-2xl font-bold text-white pt-15">
+            LAST PROJECT
+          </h2>
+
+          <div className="grid grid-cols-4 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <a href="https://graph-ql.zanakan.fr" target="_blank" rel="noopener noreferrer">
               <InstagramPhoto src="/projects/graph_ql.png" />
+            </a>
+            <a href="https://barber.zanakan.fr" target="_blank" rel="noopener noreferrer">
               <InstagramPhoto src="/projects/barber.png" />
+            </a>
+            <a href="https://real-time-forum.zanakan.fr" target="_blank" rel="noopener noreferrer">
               <InstagramPhoto src="/projects/real-time-forum.png" />
+            </a>
+            <a href="https://tetris.zanakan.fr" target="_blank" rel="noopener noreferrer">
               <InstagramPhoto src="/projects/tetris.png" />
+            </a>
           </div>
         </section>
+
         
         <section id="project-slider" className="flex justify-center mt-10 rounded-md pt-15">
           <CategoryFilter
