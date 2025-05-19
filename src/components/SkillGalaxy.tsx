@@ -54,7 +54,7 @@ function SkillSphere() {
     <>
       {positions.map((item, i) => (
         <mesh key={i} position={item.position}>
-          <sphereGeometry args={[0.1, 100, 100]} />
+          <sphereGeometry args={[0, 100, 100]} />
           <meshStandardMaterial color="blue" />
           <Html
             center
@@ -68,7 +68,7 @@ function SkillSphere() {
               title={item.skill.name}
               width={200}
               height={200}
-              className="object-contain border rounded-full bg-white"
+              className="object-contain border rounded-full "
             />
           </Html>
         </mesh>
