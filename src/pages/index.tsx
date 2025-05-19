@@ -56,7 +56,9 @@ export default function Home() {
         <section data-aos="zoom-in">
           <ProjectSlider activeCategory={activeCategory} />
         </section>
-        <section id="skills">
+
+        <section id="skills" >
+          <div className="flex justify-center text-3xl py-25">SKILLS</div>
           <SkillGalaxy />
         </section>
         
