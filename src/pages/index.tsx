@@ -15,8 +15,8 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState("ALL");
 
   const myImages = [
-    { src: "/images/githubProfile.jpg", alt: "Photo 1" }
-    //{ src: "/images/sunrise.jpg", alt: "Photo 2" },
+    { src: "/images/githubProfile.jpg", alt: "Photo 1" },
+    { src: "/images/sunrise.jpg", alt: "Photo 2" },
     //{ src: "/images/eva.jpg", alt: "Photo 3" },
    //{ src: "/images/waverobot.jpg", alt: "Photo 4" },
     /*{ src: "/images/githubProfile5.jpg", alt: "Photo 5" },
@@ -31,14 +31,14 @@ export default function Home() {
         <Header />
         <HeroSection />
         <div className="flex justify-center items-center mt-10 p-15">
-          <RainbowButton href="/about">HOW I CAN CONTRIBUTE TO YOUR SUCESS ? </RainbowButton>
+          <RainbowButton href="/about"> ABOUT ME </RainbowButton>
         </div>
         <section className=" text-white absolute right-45 top-17 ">
           <ImageGallery images={myImages} />
         </section>
         <section data-aos="fade-up">
           <h2 className="flex justify-center text-2xl font-bold text-white pt-15 ">LAST PROJECT</h2>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-6xl mx-auto ">
+          <div className="grid grid-cols-4 md:grid-cols-4 gap-4 max-w-5xl mx-auto ">
               <InstagramPhoto src="/projects/graph_ql.png" />
               <InstagramPhoto src="/projects/barber.png" />
               <InstagramPhoto src="/projects/real-time-forum.png" />
