@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-black to-blue-800 text-white">
       <StarsBackground />
-      <div className="px-15">
+      <div className="px-3">
         <Header />
         
         <section className="flex flex-col md:flex-row items-center justify-center text-white gap-8 py-10 px-4">
