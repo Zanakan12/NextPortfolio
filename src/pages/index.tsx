@@ -76,7 +76,7 @@ export default function Home() {
         </section>
 
         <section id="skills" >
-          <span className="flex items-center justify-center text-2xl p-15">SKILLS</span>
+          <span className="text-4xl md:text-3xl font-bold text-center mb-8 text-white">SKILLS</span>
           <SkillGalaxy />
         </section>
         
