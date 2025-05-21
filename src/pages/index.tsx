@@ -29,15 +29,19 @@ export default function Home() {
       <StarsBackground />
       <div className="px-15">
         <Header />
-        <HeroSection />
+        
+        <section className=" flex justify-center text-white ">
+          <ImageGallery images={myImages} />
+          <HeroSection />
+        </section>
+
+        
         <div className="flex justify-center items-center mt-10 p-15">
           <RainbowButton href="/about"> ABOUT ME </RainbowButton>
         </div>
-        <section className=" text-white absolute right-45 top-17 ">
-          <ImageGallery images={myImages} />
-        </section>
+        
 
-        <section data-aos="fade-up">
+        <section>
           <h2 className="flex justify-center text-2xl font-bold text-white pt-15">
             LAST PROJECT
           </h2>
@@ -66,7 +70,7 @@ export default function Home() {
           />
         </section>
 
-        <section data-aos="zoom-in">
+        <section>
           <StarsBackground />
           <ProjectSlider activeCategory={activeCategory} />
         </section>
