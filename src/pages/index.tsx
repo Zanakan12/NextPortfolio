@@ -30,7 +30,7 @@ export default function Home() {
       <div className="px-15">
         <Header />
         
-        <section className=" flex justify-center text-white py-15">
+        <section className="flex flex-col md:flex-row items-center justify-center text-white gap-8 py-10 px-4">
           <ImageGallery images={myImages} />
           <HeroSection />
         </section>
@@ -61,7 +61,6 @@ export default function Home() {
             </a>
           </div>
         </section>
-
         
         <section id="project-slider" className="flex justify-center mt-10 rounded-md pt-15">
           <CategoryFilter

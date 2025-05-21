@@ -20,8 +20,9 @@ export default function ImageSlider({ images }: ImageSliderProps) {
   }, [images.length]);
 
   return (
-    <section className="flex flex-col items-center justify-center pt-10">
-      <div className="relative w-100 h-100 rounded-full overflow-hidden shadow-lg border-2 border-white">
+    <section className="flex flex-col items-center justify-center pt-10 px-4">
+      {/* Taille définie ici */}
+      <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg border-2 border-white">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -34,8 +35,9 @@ export default function ImageSlider({ images }: ImageSliderProps) {
             <Image
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
+              priority
             />
           </motion.div>
         </AnimatePresence>
