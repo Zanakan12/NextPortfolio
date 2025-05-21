@@ -15,8 +15,8 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState("ALL");
 
   const myImages = [
-    { src: "/images/githubProfile.jpg", alt: "Photo 1" },
-    { src: "/images/sunrise.jpg", alt: "Photo 2" },
+    { src: "/images/image.png", alt: "Photo 1" }
+    //{ src: "/images/sunrise.jpg", alt: "Photo 2" },
     //{ src: "/images/eva.jpg", alt: "Photo 3" },
    //{ src: "/images/waverobot.jpg", alt: "Photo 4" },
     /*{ src: "/images/githubProfile5.jpg", alt: "Photo 5" },
