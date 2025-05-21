@@ -11,7 +11,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ image, title, github, site, badge, cardState }: ProjectCardProps) {
-  const badgeColor = badge === "LIVE" ? "bg-green-500" : "bg-yellow-400";
+  const badgeColor = badge === "LIVE" ? "bg-green-500" : "bg-blue-400";
   const badgeTextColor = badge === "LIVE" ? "text-white" : "text-black";
 
   const state = cardState ? "PRIVATE" : "PUBLIC";
@@ -52,7 +52,7 @@ export default function ProjectCard({ image, title, github, site, badge, cardSta
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-yellow-400 transition text-2xl"
+              className="text-white hover:text-blue-400 transition text-2xl"
               title="View on GitHub"
             >
               <FaGithub />
@@ -63,7 +63,7 @@ export default function ProjectCard({ image, title, github, site, badge, cardSta
               href={site}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-yellow-400 transition text-2xl"
+              className="text-white hover:text-blue-400 transition text-2xl"
               title="Visit Site"
             >
               <FaExternalLinkAlt />

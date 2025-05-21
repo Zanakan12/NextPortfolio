@@ -8,7 +8,7 @@ export default function ContactMe() {
       {/* Bouton "Contact Me" */}
       <Link href="/contact">
         <motion.button
-          className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
+          className="bg-blue-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >

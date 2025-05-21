@@ -6,7 +6,7 @@ import SkillGrid from "../components/SkillGrid";
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-black to-blue-900 text-white p-8 space-y-16">
+        <main className="min-h-screen bg-gradient-to-b from-black to-blue-800 text-white p-8 space-y-16">
 
             {/* BIO */}
             <motion.section
@@ -29,7 +29,7 @@ export default function AboutPage() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
                 >
-                    {"I'm"} <span className="font-semibold text-yellow-400">{"Djihadi Raftandjani"}</span>, {"a full-stack developer apprentice with a dual background in science and tech. I'm passionate about building efficient, innovative, and scalable solutions for real-world problems."}
+                    {"I'm"} <span className="font-semibold text-blue-400">{"Djihadi Raftandjani"}</span>, {"a full-stack developer apprentice with a dual background in science and tech. I'm passionate about building efficient, innovative, and scalable solutions for real-world problems."}
                 </motion.p>
                 <motion.div
                     className="mt-6"
@@ -40,7 +40,7 @@ export default function AboutPage() {
                     <a
                         href="/cv-raftandjani.pdf"
                         download
-                        className="inline-block bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition"
+                        className="inline-block bg-blue-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-blue-300 transition"
                     >
                         {"📄 Download CV"}
                     </a>
@@ -55,7 +55,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.2, duration: 0.6 }}
             >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaKey className="text-yellow-400" /> {"My Value"}
+                    <FaKey className="text-blue-400" /> {"My Value"}
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4 text-sm text-white/90">
                     <ul className="space-y-2 list-disc pl-5">
@@ -79,31 +79,31 @@ export default function AboutPage() {
                 transition={{ delay: 0.3, duration: 0.6 }}
             >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaTools className="text-yellow-400" /> {"My Technical Expertise"}
+                    <FaTools className="text-blue-400" /> {"My Technical Expertise"}
                 </h2>
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div>
-                        <p className="font-semibold text-yellow-400 mb-2">{"Languages"}</p>
+                        <p className="font-semibold text-blue-400 mb-2">{"Languages"}</p>
                         <ul className="space-y-1">
                             <li>{"Go, C++, Python, JavaScript, HTML, CSS"}</li>
                             <li>{"Kotlin, Rust (learning)"}</li>
                         </ul>
                     </div>
                     <div>
-                        <p className="font-semibold text-yellow-400 mb-2">{"Frameworks"}</p>
+                        <p className="font-semibold text-blue-400 mb-2">{"Frameworks"}</p>
                         <ul className="space-y-1">
                             <li>{"Django, Dear ImGui, Android Studio"}</li>
                             <li>{"Qt Creator, MIT App Inventor, React, Next"}</li>
                         </ul>
                     </div>
                     <div>
-                        <p className="font-semibold text-yellow-400 mb-2">{"Databases"}</p>
+                        <p className="font-semibold text-blue-400 mb-2">{"Databases"}</p>
                         <ul className="space-y-1">
                             <li>{"SQLite, MobiDB, TinyDB, TinyWebDB"}</li>
                         </ul>
                     </div>
                     <div>
-                        <p className="font-semibold text-yellow-400 mb-2">{"Tools"}</p>
+                        <p className="font-semibold text-blue-400 mb-2">{"Tools"}</p>
                         <ul className="space-y-1">
                             <li>{"Git, Docker, UML, VS Code"}</li>
                             <li>{"Figma, REST API, WebSocket"}</li>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.4, duration: 0.6 }}
             >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaGraduationCap className="text-yellow-400" /> {"Education & Experience"}
+                    <FaGraduationCap className="text-blue-400" /> {"Education & Experience"}
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6 text-sm">
                     <div>
@@ -163,7 +163,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.6, duration: 0.6 }}
             >
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                    <FaLanguage className="text-yellow-400" /> {"Languages & Personal Info"}
+                    <FaLanguage className="text-blue-400" /> {"Languages & Personal Info"}
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                     <div>

@@ -7,6 +7,13 @@ export default function Navbar() {
             <Link href="#skills">SKILLS</Link>
             <Link href="#service">COMPETENCES</Link>
             <Link href="#contact">Contact ME</Link>
+            <Link
+                        href="/cv-raftandjani.pdf"
+                        download
+                        className="inline-block bg-blue-400 text-black px-3 py-1 rounded-full font-semibold hover:bg-yellow-300 transition"
+                    >
+                        {"📄 CV"}
+            </Link>
         </nav>
     );
 }

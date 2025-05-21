@@ -25,24 +25,24 @@ export default function Home() {
     { src: "/images/githubProfile8.jpg", alt: "Photo 8" },*/
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black to-blue-200 text-white">
+    <div className="min-h-screen bg-gradient-to-r from-black to-blue-800 text-white">
       <StarsBackground />
       <div className="px-15">
         <Header />
         
-        <section className=" flex justify-center text-white ">
+        <section className=" flex justify-center text-white py-15">
           <ImageGallery images={myImages} />
           <HeroSection />
         </section>
 
         
-        <div className="flex justify-center items-center mt-10 p-15">
-          <RainbowButton href="/about"> ABOUT ME </RainbowButton>
+        <div className="flex justify-center items-center mt-5 pb-15">
+          <RainbowButton href="/about"> QUICK VISIT </RainbowButton>
         </div>
         
 
         <section>
-          <h2 className="flex justify-center text-2xl font-bold text-white pt-15">
+          <h2 className="flex justify-center text-4xl md:text-3xl font-bold text-center mt-10 mb-8 text-white">
             LAST PROJECT
           </h2>
 
@@ -76,7 +76,7 @@ export default function Home() {
         </section>
 
         <section id="skills" >
-          <span className="text-4xl md:text-3xl font-bold text-center mb-8 text-white">SKILLS</span>
+          <span className=" flex justify-center text-4xl md:text-3xl font-bold text-center mb-8 text-white">SKILLS</span>
           <SkillGalaxy />
         </section>
         

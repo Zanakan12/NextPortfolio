@@ -7,8 +7,8 @@ interface SkillCategoryProps {
 
 const SkillCategory = ({ title, skills }: SkillCategoryProps) => (
     <section className="mb-12 text-center">
-      <h2 className="text-2xl font-bold text-yellow-400 mb-2">{title}</h2>
-      <div className="h-1 w-10 bg-yellow-400 mx-auto mb-6" />
+      <h2 className="text-2xl font-bold text-blue-400 mb-2">{title}</h2>
+      <div className="h-1 w-10 bg-blue-400 mx-auto mb-6" />
       <div className="flex flex-wrap justify-center gap-4">
         {skills.map((skill) => (
           <div key={skill.name} className="bg-[#1f1f2e] rounded-xl p-4 w-24 h-24 flex items-center justify-center shadow hover:scale-110 transition">

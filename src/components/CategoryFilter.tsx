@@ -19,7 +19,7 @@ export default function CategoryFilter({ activeCategory, setActiveCategory }: Ca
       {categories.map((category, index) => (
         <button
           key={index}
-          className={`uppercase font-bold text-sm transition ${activeCategory === category ? "text-yellow-400" : "hover:text-yellow-400"
+          className={`uppercase font-bold text-sm transition ${activeCategory === category ? "text-blue-400" : "hover:text-blue-400"
             }`}
           onClick={() => setActiveCategory(category)}
         >

@@ -17,7 +17,7 @@ export default function Footer() {
             {/* Ligne séparation + baseline */}
             <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p className="text-xs text-center sm:text-left">
-                    © 2025 <span className="text-yellow-400">Raftandjani</span>. All Rights Reserved
+                    © 2025 <span className="text-blue-400">Raftandjani</span>. All Rights Reserved
                 </p>
 
                 <div className="flex gap-4 text-xs">
