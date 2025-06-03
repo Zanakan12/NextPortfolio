@@ -43,7 +43,7 @@ export default function Home() {
 
         <section>
           <h2 className="flex justify-center text-4xl md:text-3xl font-bold text-center mt-10 mb-8 text-white">
-            LAST PROJECT
+            PROJECT IN PROGRESS
           </h2>
 
           <div className="grid grid-cols-4 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
