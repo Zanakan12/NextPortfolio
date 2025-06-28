@@ -87,7 +87,7 @@ export default function SkillGalaxy() {
     <div className="relative w-full h-[700px]" id="skill-section">
       {/* Flèche vers le haut */}
       <div
-        className="absolute top-4 left-1/2 transform -translate-x-1/2 cursor-pointer z-10 text-white"
+        className="absolute top-4 left-1/2 transform -translate-x-1/2 cursor-pointer z-10 text-white md:hidden"
         onClick={() => scrollTo("project-slider")}
       >
         <AiFillCaretUp size={50} />
@@ -107,7 +107,7 @@ export default function SkillGalaxy() {
 
       {/* Flèche vers le bas */}
       <div
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer z-10 text-white"
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer z-10 text-white md:hidden"
         onClick={() => scrollTo("service")}
       >
         <AiFillCaretDown size={50} />
