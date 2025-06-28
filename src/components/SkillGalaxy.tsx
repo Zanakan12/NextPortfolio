@@ -5,7 +5,7 @@ import { OrbitControls, Html } from "@react-three/drei";
 import { useMemo } from "react";
 import Image from "next/image";
 import StarsBackground from "./StarBackground";
-
+import { AiFillCaretDown, AiFillCaretUp} from "react-icons/ai";
 
 const skills = [
   { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
@@ -78,15 +78,40 @@ function SkillSphere() {
 }
 
 export default function SkillGalaxy() {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className=" relative w-full h-[700px] ">
+    <div className="relative w-full h-[700px]" id="skill-section">
+      {/* Flèche vers le haut */}
+      <div
+        className="absolute top-4 left-1/2 transform -translate-x-1/2 cursor-pointer z-10 text-white"
+        onClick={() => scrollTo("project-slider")}
+      >
+        <AiFillCaretUp size={50} />
+      </div>
+
       <StarsBackground />
-      <Canvas gl={{ alpha: true }} style={{ background: "transparent" }} camera={{ position: [0, 0, 12], fov: 60 }}>
+      <Canvas
+        gl={{ alpha: true }}
+        style={{ background: "transparent" }}
+        camera={{ position: [0, 0, 12], fov: 60 }}
+      >
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />
         <SkillSphere />
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
       </Canvas>
+
+      {/* Flèche vers le bas */}
+      <div
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer z-10 text-white"
+        onClick={() => scrollTo("service")}
+      >
+        <AiFillCaretDown size={50} />
+      </div>
     </div>
   );
 }
