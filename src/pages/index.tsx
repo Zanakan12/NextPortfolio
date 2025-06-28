@@ -43,7 +43,7 @@ export default function Home() {
 
         <section>
           <h2 className="flex justify-center text-4xl md:text-3xl font-bold text-center mt-10 mb-8 text-white">
-            PROJECT IN PROGRESS
+            LAST PROJECT
           </h2>
 
           <div className="grid grid-cols-4 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
@@ -74,8 +74,8 @@ export default function Home() {
           <ProjectSlider activeCategory={activeCategory} />
         </section>
 
-        <section id="skills" >
-          <span className=" flex justify-center text-4xl md:text-3xl font-bold text-center mb-8 text-white">SKILLS</span>
+        <section id="skill" >
+          <span className=" flex justify-center text-4xl md:text-3xl font-bold text-center mb-8 text-white p-5">SKILLS</span>
           <SkillGalaxy />
         </section>
         
